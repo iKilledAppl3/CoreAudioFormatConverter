@@ -8,7 +8,7 @@ echo https://stackoverflow.com/questions/254080/converting-audio-to-caf-format-f
 echo
 echo Make sure the file is placed on the desktop and is of the .mp3 format.
 echo 
-read -p "Changing to the direcotry to the Desktop shall we continue? Y/n?" answer
+read -p "Changing to the directory to the Desktop shall we continue? Y/n?" answer
 while true
 do
 	case $answer in
