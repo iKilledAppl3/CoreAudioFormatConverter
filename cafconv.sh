@@ -22,10 +22,23 @@ done
 
 for f in *.mp3 
 do
-	echo "Converting $f file to caf Please wait..."
+	echo "Converting $f to .caf Please wait..."
 	afconvert -f caff -d LEI16 "$f" "${f/mp3/caf}"
  
 done
+echo "Done!"
+read -p "Want to delete the old mp3 files? WARNING WILL DELETE ALL .MP3 FILES! YOU HAVE BEEN WARNED! Y/n?" answer
+while true
+do
+	case $answer in
+		[yY]* ) echo ">>Deleting!... NO ESCAPE!"
+		cd /users/$USER/Desktop && rm -rf *.mp3
+				break;;
+		* )		break;;
+	esac
+	
+done
+echo
 echo "Done!"
 echo
 echo "Thanks for using follow me on Twitter @iKilledAppl3"
